@@ -1,0 +1,25 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="bot.box.appusage" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->C:\Users\YADNIK\AndroidStudioProjects\AppRecomendation2\appusagemonitor\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="29" />
+7-->C:\Users\YADNIK\AndroidStudioProjects\AppRecomendation2\appusagemonitor\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+9-->C:\Users\YADNIK\AndroidStudioProjects\AppRecomendation2\appusagemonitor\src\main\AndroidManifest.xml:4:5-75
+9-->C:\Users\YADNIK\AndroidStudioProjects\AppRecomendation2\appusagemonitor\src\main\AndroidManifest.xml:4:22-72
+10
+11    <application>
+11-->C:\Users\YADNIK\AndroidStudioProjects\AppRecomendation2\appusagemonitor\src\main\AndroidManifest.xml:5:5-9:19
+12        <provider
+12-->C:\Users\YADNIK\AndroidStudioProjects\AppRecomendation2\appusagemonitor\src\main\AndroidManifest.xml:6:9-8:71
+13            android:name="bot.box.appusage.provider.AppUsageProvider"
+13-->C:\Users\YADNIK\AndroidStudioProjects\AppRecomendation2\appusagemonitor\src\main\AndroidManifest.xml:7:13-70
+14            android:authorities="${applicationId}.AppUsageProvider" />
+14-->C:\Users\YADNIK\AndroidStudioProjects\AppRecomendation2\appusagemonitor\src\main\AndroidManifest.xml:8:13-68
+15    </application>
+16
+17</manifest>

@@ -1,0 +1,64 @@
+bot/box/appusage/contract/UsageContracts.java
+ bot.box.appusage.contract.UsageContracts
+ bot.box.appusage.contract.UsageContracts$Presenter
+ bot.box.appusage.contract.UsageContracts$View
+bot/box/appusage/BotMonitor.java
+ bot.box.appusage.BotMonitor
+bot/box/appusage/handler/Monitor.java
+ bot.box.appusage.handler.Monitor
+bot/box/appusage/contract/BaseView.java
+ bot.box.appusage.contract.BaseView
+bot/box/appusage/datamanager/DataManager.java
+ bot.box.appusage.datamanager.DataManager
+ bot.box.appusage.datamanager.DataManager$ClonedEvent
+bot/box/appusage/delegate/FetchPackageTimelineDelegate.java
+ bot.box.appusage.delegate.FetchPackageTimelineDelegate
+ bot.box.appusage.delegate.FetchPackageTimelineDelegate$OnTimeLineCallback
+bot/box/appusage/utils/DurationRange.java
+ bot.box.appusage.utils.DurationRange
+ bot.box.appusage.utils.DurationRange$DURATIONRANGE
+bot/box/appusage/handler/UsageGenerator.java
+ bot.box.appusage.handler.UsageGenerator
+bot/box/appusage/presenter/UsagePresenter.java
+ bot.box.appusage.presenter.UsagePresenter
+ bot.box.appusage.presenter.UsagePresenter$1
+bot/box/appusage/contract/TimelineContracts.java
+ bot.box.appusage.contract.TimelineContracts
+ bot.box.appusage.contract.TimelineContracts$Presenter
+ bot.box.appusage.contract.TimelineContracts$View
+bot/box/appusage/presenter/PackagePresenter.java
+ bot.box.appusage.presenter.PackagePresenter
+ bot.box.appusage.presenter.PackagePresenter$1
+ bot.box.appusage.presenter.PackagePresenter$2
+bot/box/appusage/BuildConfig.java
+ bot.box.appusage.BuildConfig
+bot/box/appusage/model/AppData.java
+ bot.box.appusage.model.AppData
+ bot.box.appusage.model.AppData$1
+bot/box/appusage/handler/PackageGenerator.java
+ bot.box.appusage.handler.PackageGenerator
+bot/box/appusage/handler/TimelineGenerator.java
+ bot.box.appusage.handler.TimelineGenerator
+bot/box/appusage/delegate/FetchAppUsageDelegate.java
+ bot.box.appusage.delegate.FetchAppUsageDelegate
+ bot.box.appusage.delegate.FetchAppUsageDelegate$AppUsageCallback
+bot/box/appusage/presenter/TimelinePresenter.java
+ bot.box.appusage.presenter.TimelinePresenter
+bot/box/appusage/provider/AppUsageProvider.java
+ bot.box.appusage.provider.AppUsageProvider
+bot/box/appusage/model/TimeLine.java
+ bot.box.appusage.model.TimeLine
+bot/box/appusage/contract/PackageContracts.java
+ bot.box.appusage.contract.PackageContracts
+ bot.box.appusage.contract.PackageContracts$Presenter
+ bot.box.appusage.contract.PackageContracts$View
+bot/box/appusage/utils/Duration.java
+ bot.box.appusage.utils.Duration
+ bot.box.appusage.utils.Duration$DURATION
+bot/box/appusage/utils/SortOrder.java
+ bot.box.appusage.utils.SortOrder
+bot/box/appusage/utils/UsageManager.java
+ bot.box.appusage.utils.UsageManager
+bot/box/appusage/utils/UsageUtils.java
+ bot.box.appusage.utils.UsageUtils
+ bot.box.appusage.utils.UsageUtils$1
