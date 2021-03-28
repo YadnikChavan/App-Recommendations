@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,6 +53,13 @@ public class DetailActivity extends AppCompatActivity {
 
         readingFile();
 
+        searchResult result = new searchResult(DetailActivity.this);
+        result.execute(packageName);
+        searchLinks links=new searchLinks(DetailActivity.this);
+        links.execute(packageName);
+        searchIcon icon = new searchIcon(DetailActivity.this);
+        icon.execute(packageName);
+
         Monitor.scan().queryFor(new PackageContracts.View() {
             @Override
             public void getUsageForPackage(AppData appData, int duration) {
@@ -61,8 +70,6 @@ public class DetailActivity extends AppCompatActivity {
                 ((TextView) findViewById(R.id.total_usage_time)).setText(UsageUtils.humanReadableMillis(appData.mUsageTime));
                 Glide.with(DetailActivity.this).load(UsageUtils.parsePackageIcon(appData.mPackageName, R.mipmap.ic_launcher)).transition(new DrawableTransitionOptions().crossFade()).into((ImageView) findViewById(R.id.icon));
             }
-
-
 
             @Override
             public void showProgress() {
@@ -85,7 +92,22 @@ public class DetailActivity extends AppCompatActivity {
                 timeLineAdapter.updateData(timeline);
             }
         }).whichPackage(packageName).fetchForToday();
+
+        Button button = findViewById(R.id.buttonShowRecommand);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, RecommendationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
 
     public void readingFile(){
         try {
@@ -93,25 +115,25 @@ public class DetailActivity extends AppCompatActivity {
             InputStream inputStream = getResources().openRawResource(R.raw.playstore);
             BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
             boolean found=false;
-            String line="";String AppId="";String AppName ="";String AppCategory ="";String AppRating ="";String AppRatingCount ="";
+            String line="";
+            String AppId="";String AppName ="";String AppCategory ="";String AppRating ="";String AppRatingCount ="";
 
             Log.i("DetailActivity","packageName :"+packageName);
 
             while ((line=bufferedReader.readLine()) != null && !found){
 
                 String App[]=line.split(",");
-                //Log.i("DetailActivity", "line: "+App[0]);
                 AppId = App[0];
                 if(AppId.equals(packageName)){
                     found=true;
-                    AppName = App[1];AppCategory=App[2];AppRating=App[3];AppRatingCount=App[4];
+                    AppName = App[1];
+                    AppCategory=App[2];
+                    AppRating=App[3];
+                    AppRatingCount=App[4];
                 }
-
-
             }
-
             if(found){
-                Log.i("DetailActivity","AppId:"+AppId+" AppName:"+AppName+" AppCategory:"+AppCategory+" AppRating:"+AppRating+" AppRatingCount:"+AppRatingCount);
+                Log.i("DetailActivity","\n AppName:"+AppName+"\n AppCategory:"+AppCategory+"\n AppRating:"+AppRating+"\n AppRatingCount:"+AppRatingCount);
             }
             else {
                 Log.i("DetailActivity","Cannot Found the App");
@@ -121,8 +143,5 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    public void searchSimilar(){
-
-    }
 
 }

@@ -12,7 +12,6 @@
         <item quantity="one">Time Launched</item>
         <item quantity="other">Times Launched</item>
     </plurals>
-    <string name="not_active">Device was not active for</string>
     <string name="in_use">In Use</string>
 
     <string-array name="array_palette">
